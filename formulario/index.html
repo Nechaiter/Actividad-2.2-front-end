@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor-titulo">
+        <h1>Chile Limpio</h1>
+    </div>
+    <div class="contenedor-formulario">
+        <form  id="formulario">
+        <label>Rut: <input type="text" id="rut" minlength="9" maxlength="10" placeholder="98765432-k" required></label>    <!-- Ver lo de ion k y concadenar -->
+        <br></br>
+        <label>Nombre: <input type="text" id="nombre" minlength="3" maxlength="20" required></label>
+        <br></br>
+        <label>Apellido Paterno: <input type="text" id="Apellido-paterno" minlength="3" maxlength="20" required></label>
+        <br></br>
+        <label>Apellido Materno: <input type="text" id="apellido-materno" minlength="3" maxlength="20" required></label>
+        <br></br>
+        <label>Fecha nacimiento: <input type="date" id="fecha" required></label> <!-- Limitar fecha hasta 18-->
+        <br></br>
+        <label>Edad: <input type="number" id="edad" min="18" max="35" required></label>  
+        <br></br>
+        <label>Genero:</label> 
+        <br></br>
+        <label>Masculino</label><input type="Radio" id="genero1" name="option"required class="selector">
+        <br></br>
+        <label>Femenino <label><input type="Radio" id="genero2" name="option" required class="selector">
+        <br></br>
+        <label>Email: <input type="email" id="email" required></label>
+        <br></br>
+        <label>Celular: <input type="number" id="celular" min="900000000" max="999999999" placeholder="987654321" required></label>
+        <br></br>
+        <label>Profesion: <input type="text" id="Profesion" required></label>
+        <br></br>
+        <label>Motivacion para postular: </label>
+        <br></br>
+        <textarea name="textarea"  id="Motivacion" required></textarea>
+        <br></br>
+        <textarea name="textarea" rows="10" cols="51" id="CartaGenerada"></textarea>
+            <div class="contenedor-carta">
+        <input type="submit" class="botones" value="Procesar datos" onclick="guardarDatos(event);" id="Procesar">
+        <input type="submit" class="botones" value="Crear Carta" onclick="MostrarCarta(event);" id="carta">
+            </div>
+        </form>
+    </div>
+    <script src="funciones.js"></script>
+</body>
+</html>
